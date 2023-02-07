@@ -23,27 +23,27 @@ import {useState} from 'react'
 import {Modal} from 'asean-react-modal'
 ```
 
-In your component, you have to create a new state and use the modal component width props you need : 
+In your component, you have to create some elements : 
 
-```
 //state for the modal 
+```
 const [showModal, setShowModal] = useState(false)
 ```
 
+//function to hide modal by clicking on modal close button
 ```
-//function to hide modal on click on close button
 const hideModal = () => showModal && setShowModal(false)
 ```
 
+//add Modal compoment
 ```
-//called in the compoment
-    <Modal show={showModal} onClickCloseBtn={hideModal}>
-		<h1>Your modal text here</h1>
-    </Modal>
+<Modal show={showModal} onClickCloseBtn={hideModal}>
+    <h1>Your modal text here</h1>
+</Modal>
 ```
 
+//Change modal state where you want it to be displayed
 ```
-//Change the modal state where you want it to be displayed
 setShowModal(true)
 ```
 
