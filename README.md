@@ -25,24 +25,24 @@ import {Modal} from 'asean-react-modal'
 
 In your component, you have to create some elements : 
 
-//state for the modal 
+State for the modal 
 ```
 const [showModal, setShowModal] = useState(false)
 ```
 
-//function to hide modal by clicking on modal close button
+Function to hide modal by clicking on modal close button
 ```
 const hideModal = () => showModal && setShowModal(false)
 ```
 
-//add Modal compoment
+Add Modal compoment
 ```
 <Modal show={showModal} onClickCloseBtn={hideModal}>
     <h1>Your modal text here</h1>
 </Modal>
 ```
 
-//Change modal state where you want it to be displayed
+Change modal state where you want it to be displayed
 ```
 setShowModal(true)
 ```
