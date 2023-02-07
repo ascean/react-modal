@@ -16,33 +16,33 @@ In your project, run this command :
 
 ## Usage
 
-import the component and useState  in your code :
+### Import modal component and useState in your code :
 
 ```
 import {useState} from 'react'
 import {Modal} from 'asean-react-modal'
 ```
 
-In your component, you have to create some elements : 
+### In your component, you have to create some elements : 
 
-State for the modal 
+#### State for the modal 
 ```
 const [showModal, setShowModal] = useState(false)
 ```
 
-Function to hide modal by clicking on modal close button
+#### Function to hide modal by clicking on modal close button
 ```
 const hideModal = () => showModal && setShowModal(false)
 ```
 
-Add Modal compoment
+#### Call Modal compoment
 ```
 <Modal show={showModal} onClickCloseBtn={hideModal}>
     <h1>Your modal text here</h1>
 </Modal>
 ```
 
-Change modal state where you want it to be displayed
+#### Change modal state where you want it to be displayed
 ```
 setShowModal(true)
 ```
