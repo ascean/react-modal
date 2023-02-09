@@ -1,5 +1,7 @@
 # Simple Modal npm package
 
+Accessible modal dialog component for ReactJS
+
 You can find this npm package by clicking on : https://www.npmjs.com/package/asean-react-modal
 
 ## Requirements
@@ -11,8 +13,11 @@ You can find this npm package by clicking on : https://www.npmjs.com/package/ase
 ## Installation
 
 In your project, run this command :
-
-`npm install asean-react-modal`
+```
+$ npm install asean-react-modal
+or
+$ yarn add asean-react-modal
+```
 
 ## Usage
 
@@ -37,7 +42,10 @@ const hideModal = () => showModal && setShowModal(false)
 
 #### Call Modal compoment
 ```
-<Modal show={showModal} onClickCloseBtn={hideModal}>
+<Modal 
+  show={showModal} 
+  onClickCloseBtn={hideModal}
+>
     <h1>Your modal text here</h1>
 </Modal>
 ```
@@ -45,6 +53,82 @@ const hideModal = () => showModal && setShowModal(false)
 #### Change modal state where you want it to be displayed
 ```
 setShowModal(true)
+```
+## Options
+### Content to display (string)
+```
+<Modal 
+  show={showModal} 
+  onClickCloseBtn={hideModal}
+>
+  <h1>Your content here</h1>
+</Modal>
+```
+### Close modal by pressing "ESC" (default value : true)
+```
+<Modal 
+  show={showModal} 
+  onClickCloseBtn={hideModal} 
+  bEscapeClose=true
+>
+  <h1>Your content here</h1>
+</Modal>
+```
+
+### Close modal by clicking the overlay (default value : true)
+```
+<Modal 
+  show={showModal} 
+  onClickCloseBtn={hideModal} 
+  bClicWrapperClose=true
+>
+  <h1>Your content here</h1>
+</Modal>
+```
+
+### Show a (X) icon/link on the top-right corner (default value:  false)
+```
+<Modal 
+  show={showModal} 
+  onClickCloseBtn={hideModal} 
+  xButton=true
+>
+  <h1>Your content here</h1>
+</Modal>
+```
+
+### Change background styles :
+- define new background styles
+```
+const bgStyles = {background: 'white'}
+```
+- add style in modal props
+
+```
+<Modal 
+  show={showModal} 
+  onClickCloseBtn={hideModal} 
+  backgroundStyles = {bgStyles}
+>
+  <h1>Your content here</h1>
+</Modal>
+```
+
+### Change button styles
+- define new button styles
+```
+const btnStyles = {background:'black', color:'white', borderColor:'yellow'}
+```
+- add style in modal props
+
+```
+<Modal 
+  show={showModal} 
+  onClickCloseBtn={hideModal} 
+  backgroundStyles = {bgStyles}
+>
+  <h1>Your content here</h1>
+</Modal>
 ```
 
 ## Used Technologies / Dependencies

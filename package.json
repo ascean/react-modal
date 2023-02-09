@@ -1,13 +1,13 @@
 {
   "name": "asean-react-modal",
   "description": "React modal component",
-  "author": "Asean",
+  "author": "Sandrine Jenot",
   "keywords": [
     "react",
     "components",
-    "ui"
+    "modal"
   ],
-  "version": "0.1.0",
+  "version": "0.5.0",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -18,5 +18,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ascean/react-modal.git"
+  },
+  "bugs": {
+    "url":"git+https://github.com/ascean/react-modal/issues"
   }
 }
